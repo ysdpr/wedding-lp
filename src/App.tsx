@@ -136,40 +136,27 @@ function App() {
   useCountDownInterval(countTime, setCountTime)
   return (
     <>
-      <div className="w-[100vw] h-[100vh]">
-        <div className="w-full h-[300px]">
-          <div className="w-[390px] h-[390px] relative overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 bottom-0 m-auto w-[128px] h-[128px]">
-              <svg viewBox="0 0 128 128" className="svgbox">
-                <g fontSize="128">
-                  <text x="64" y="56" textAnchor="middle" dominantBaseline="central" fill="none">
-                    <tspan>寿</tspan>
-                  </text>
-                </g>
-              </svg>
-            </div>
-
-            <Path />
-          </div>
-        </div>
-      </div>
-      {/* </div> */}
-      <div className="overflow-x-hidden snap-y snap-mandatory">
-        {/* <div className="overflow-x-hidden h-[100vh] snap-y snap-mandatory"> */}
-
-
+      <div className="scroll-bar"></div>
+      <div className="overflow-x-hidden">
         <div className="w-[100vw] h-[100vh] py-8 relative">
           <div className="w-full h-full absolute top-0 left-0 bg-z opacity-60"></div>
           {/* <div className="text-[#302833] text-4xl paint2 shuku bg-[#c85554] w-80 h-80 rounded-full grid place-items-center pb-6 absolute top-0 left-0 translate-x-[-50%] translate-y-[-50%]"></div> */}
           <div className="w-full h-full relative z-10 flex flex-col items-center justify-center">
-            <div className="text-[#302833] text-4xl paint2 shuku bg-[#c85554] w-64 h-64 rounded-full grid place-items-center pb-6 relative">
-              <p className="text-[#302833] text-9xl paint2 shuku absolute bottom-[-10%] right-[-10%]">
-                寿
-              </p>
+            <div className="w-[390px] h-[390px] relative overflow-hidden scale-125">
+              <div className="absolute top-0 left-0 right-0 bottom-0 m-auto w-[128px] h-[128px]">
+                <svg viewBox="0 0 128 128" className="svgbox">
+                  <g fontSize="128">
+                    <text x="64" y="56" textAnchor="middle" dominantBaseline="central">
+                      <tspan>寿</tspan>
+                    </text>
+                  </g>
+                </svg>
+              </div>
+              <Path />
             </div>
-            <p className="text-white text-5xl paint2 test mt-8">
+            {/* <p className="text-white text-5xl paint2 test mt-8">
               Our Wedding
-            </p>
+            </p> */}
           </div>
         </div>
 
@@ -212,12 +199,8 @@ function App() {
         </div>
 
         <div ref={ref2} className="w-[100vw] py-12 bg-[#2a4073] snap-start px-6">
-          {/* <div ref={ref2} className="w-[100vw] h-[100vh] py-8 bg-[#ba2636] snap-start"> */}
-
           <div className="flex justify-center">
-
-            {/* <div className="relative w-[96%] aspect-[6100/4700]"> */}
-            <div ref={pi} className="relative w-full aspect-[6100/4067] translate-x-[150%]">
+            <div ref={pi} className="relative w-full aspect-[3/2] translate-x-[150%]">
               <img src={img1} className="imgclip absolute top-0 left-0" alt="" />
               <p className="text-white text-2xl absolute bottom-0 right-0">
                 櫻井 友貴
@@ -226,12 +209,11 @@ function App() {
           </div>
           <div className="text-white text-md mt-6 leading-7">
             <p>1991年8月29日、東京都生まれ。エンジニア。</p>
-            {/* <p>普段はおうちが大好きだが、意匠を感じるアイテムが欲しいときは外出する。</p> */}
-            <p>プログラミング・DIY・洋菓子作りなど、ものづくりが得意。</p>
+            <p>プログラミング・DIY・洋菓子作りなど、ものづくりが好き。</p>
             <p className="mt-3">美味しい料理・お酒をご用意してお待ちしております。</p>
           </div>
           <div className="flex justify-center mt-8">
-            <div ref={pi2} className="relative w-full aspect-[6100/4067] translate-x-[-150%]">
+            <div ref={pi2} className="relative w-full aspect-[3/2] translate-x-[-150%]">
               <img src={img2} className="imgclip2 absolute bottom-0 right-0" alt="" />
               <p className="text-white text-2xl absolute top-0 left-0">
                 岡本 果波
@@ -245,8 +227,6 @@ function App() {
             <p className="mt-3">当日、みなさまにお会いできることを楽しみにしています。</p>
           </div>
         </div>
-
-
 
         <div className="w-[100vw] text-slate-700 bg-cherry">
           <div className="w-full h-full bg-white bg-opacity-65 py-12 px-4">
@@ -266,9 +246,7 @@ function App() {
 
         <div ref={ref} className="w-[100vw] bg-[#c1e4e9] py-12 px-4">
           <h2 className="text-3xl text-center">ご案内</h2>
-          {/* <p className="text-2xl mt-8">日程</p> */}
           <div className="">
-
             <p className="text-md mt-2">日付</p>
             <p className="flex items-end mt-1 pl-2">
               <span className="text-4xl ovo">2025</span>
@@ -280,9 +258,6 @@ function App() {
               <span className="text-2xl ml-1 pb-1">(金)</span>
             </p>
             <dl className="flex flex-col">
-              {/* <div className="flex">
-                <p className="text-md">挙式</p>
-              </div> */}
               <div className="flex items-end gap-4">
                 <div className="flex items-end gap-4 text-2xl pl-2">
                   <dt className="mb-1 w-20">挙式</dt>
@@ -293,9 +268,6 @@ function App() {
                   <dd className="mb-0.5 w-16 ovo">10:30</dd>
                 </div>
               </div>
-              {/* <div className="flex mt-2">
-                <p className="text-md">披露宴</p>
-              </div> */}
               <div className="flex items-end gap-4 pl-2">
                 <div className="flex items-end gap-4 text-2xl">
                   <dt className="mb-1 w-20">披露宴</dt>
@@ -309,7 +281,6 @@ function App() {
             </dl>
           </div>
           <h2 className="text-3xl text-center mt-8">アクセス</h2>
-          {/* <p className="text-2xl mt-8 font-bold">アクセス</p> */}
           <p className="mt-2">会場</p>
           <p className="text-3xl mt-1">神田明神</p>
           <div className="pl-2">
@@ -326,10 +297,8 @@ function App() {
 
         </div>
         <div className="w-[100vw] h-[100vh] relative overflow-hidden">
-          {/* <div className="w-[100vw] h-[100vh] flex items-center justify-center relative overflow-hidden"> */}
           <img src={img3} className="absolute top-0 left-0 w-full h-full object-cover blur-3xl" ref={pi3} alt="" />
           <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-45" ref={pi4}></div>
-          {/* <p className="text-[#e5abbe] text-xl text-center relative z-20"> */}
           <p ref={pi5} className="text-[#e5abbe] text-xl absolute bottom-[50%] text-center left-0 right-0 mx-auto translate-y-[50%] z-20">
             みなさまにお会いできるのを<br />
             楽しみにしております

@@ -73,8 +73,9 @@ body {
 }
 
 .svgbox{
-  fill: white;
-  stroke: #f6bfbc;
+  fill: transparent;
+  stroke: #c85554;
+  fill-opacity: 0;
   stroke-width:0px;
   font-family: "Yuji Syuku", serif;
   stroke-dasharray:12px 1px;  /*点線の間隔を設定*/
@@ -84,12 +85,18 @@ body {
 
 @keyframes move{
   0%{
+    fill-opacity: 0;
     stroke-dashoffset:0;
     stroke-opacity:0; /* 線の不透明度を0に */
     stroke-width:0.4px; /* 細い線から始める */
     stroke-dasharray:0px 20px; /* 最初はすべて白線 */
   }
+  40% {
+    fill-opacity: 0;
+
+  }
   100%{
+    fill-opacity: 1;
     stroke-dashoffset:20;
     stroke-opacity:1; /* 線の不透明度を1に */
     stroke-width:2px; /* だんだん線を太くする */
@@ -127,7 +134,7 @@ body {
     height: 2px;
     border-radius: 9999px;
     // background: #444;
-    background: #f6bfbc;
+    background: #c85554;
     position: absolute;
     offset-rotate: auto 90deg;
     animation: move2 1.32s linear 1 both;
@@ -218,4 +225,13 @@ body {
     offset-distance: 100%;
     opacity: 0;
   }
+}
+
+.scroll-bar {
+  width: 20px;
+  height: 80px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #0000003F;
 }
