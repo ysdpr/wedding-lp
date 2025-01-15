@@ -48,25 +48,65 @@ body {
   font-style: normal;
 }
 
+.t-width {
+  width: calc(100% + 3rem);
+}
+
+.zzz {
+  background-image: linear-gradient(#FFF,#FFF),linear-gradient(#FFF,#FFF),linear-gradient(#FFF,#FFF),linear-gradient(#FFF,#FFF),linear-gradient(#FFF,#FFF);
+  background-image: linear-gradient(#FFFFFFA0,#FFFFFFA0),linear-gradient(#FFFFFFA0,#FFFFFFA0),linear-gradient(#FFFFFFA0,#FFFFFFA0),linear-gradient(#FFFFFFA0,#FFFFFFA0),linear-gradient(#FFFFFFA0,#FFFFFFA0);
+  background-repeat: no-repeat,no-repeat,no-repeat,no-repeat, no-repeat;
+  background-position: top left,top left 7px,top right 7px, top right, top center;
+  background-size: 4px 100%, 2px 100% ,2px 100%, 4px 100%, calc(100% - 28px) 100%;
+}
+
 .imgclip {
-  /* clip-path: polygon(0% 0%, 60% 0%, 40% 100%, 0% 100%); */
-  transform: translateX(-30%);
-  /* clip-path: polygon(30% 0%, 90% 0%, 70% 100%, 30% 100%); */
-  clip-path: polygon(30% 0%, 94% 0%, 94% 100%, 30% 100%);
+  // transform: translateX(calc(-20% - 3rem));
+  // transform: translateX(calc(-20% - 3rem));
+  // clip-path: polygon(30% 0%, 94% 0%, 94% 100%, 30% 100%);
+  // clip-path: polygon(20% 0%, 84% 0%, 84% 100%, 20% 100%);
+  @media screen and (min-width: 768px) {
+    // clip-path: polygon(20% 0%, 94% 0%, 94% 100%, 20% 100%);
+    transform: translateX(-10%);
+    
+  }
 }
 
 
 .imgclip2 {
-  /* clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 40% 100%); */
-  /* clip-path: polygon(30% 0%, 70% 0%, 70% 100%, 10% 100%); */
-  clip-path: polygon(6% 0%, 70% 0%, 70% 100%, 6% 100%);
-  /* transform: translateX(30%); */
-  transform: translateX(30%);
+  // clip-path: polygon(6% 0%, 70% 0%, 70% 100%, 6% 100%);
+  // transform: translateX(30%);
+  @media screen and (min-width: 768px) {
+    // clip-path: polygon(6% 0%, 80% 0%, 80% 100%, 6% 100%);
+    transform: translateX(10%);
+    
+  }
 }
 
 .bg-f {
   background: url('./assets/jp1.jpg') no-repeat center center/cover;
 }
+
+.bg-ex {
+  background-image: url('./assets/jp2.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+	background-blend-mode: luminosity;
+}
+
+.bg-t1 {
+  background-image: url('./assets/bgt1.png');
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: 36px auto;
+
+	background-blend-mode: luminosity;
+  @media screen and (min-width: 768px) {
+    background-size: 72px auto;
+  }
+}
+
 
 .bg-z {
   background: url('./assets/IMG_0978c.jpg') no-repeat center center/cover;
