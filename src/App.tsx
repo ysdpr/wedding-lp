@@ -43,7 +43,7 @@ function App() {
         scrub: true,
       },
     });
-    
+
     gsap.to(element2, {
       backgroundColor: '#f0908d',
       scrollTrigger: {
@@ -109,7 +109,7 @@ function App() {
 
     gsap.to(pTextup1, {
       y: '0%',
-      opacity : '1',
+      opacity: '1',
       scrollTrigger: {
         trigger: pTextup1,
         start: 'center 94%',
@@ -118,7 +118,7 @@ function App() {
 
     gsap.to(pTextup2, {
       y: '0%',
-      opacity : '1',
+      opacity: '1',
       scrollTrigger: {
         trigger: pTextup2,
         start: 'center 94%',
@@ -148,18 +148,75 @@ function App() {
       }
     }, [countTime])
   }
+  
+  const useCountDownInterval2 = (
+    countTime2: number,
+    setCountTime2: (arg0: number) => void,
+  ) => {
+    useEffect(() => {
+      const countDownInterval = setInterval(() => {
+        window.addEventListener('scroll', function(){
+          clearInterval(countDownInterval)
+          setCountTime2(0);
+        });
+        setCountTime2(countTime2 + 1);
+      }, 1000)
+      return () => {
+        clearInterval(countDownInterval)
+      }
+    }, [countTime2])
+  }
 
 
 
   const now = new Date();
   const goal = new Date(2025, (3 - 1), 21, 11, 30, 0, 0);
   const betweenTime = ((goal.getTime() - now.getTime()) / 1000);
-  const [countTime, setCountTime] = useState<number>(betweenTime)
-  useCountDownInterval(countTime, setCountTime)
+  const [countTime, setCountTime] = useState<number>(betweenTime);
+  useCountDownInterval(countTime, setCountTime);
+  const [countTime2, setCountTime2] = useState<number>(0);
+  useCountDownInterval2(countTime2, setCountTime2)
+
+  // window.addEventListener('scroll', function(){
+  //   setCountTime2(0);
+  // });
+
+
+  const [drawer, setDrawer] = useState<boolean>(false);
   return (
     <>
-     {/* TODO: ドロワーメニュー作成 */}
-      <div className="scroll-bar"></div> {/* TODO: スクロールバー作成 */}
+      {/* TODO: ドロワーメニュー作成 */}
+      <div className="w-16 h-16 md:w-[10vw] md:h-[10vw] bg-slate-500 fixed top-0 right-0 z-50" onClick={() => { setDrawer(!drawer) }}>{drawer ? "true" : "false"}</div>
+      <div className={'w-[50vw] h-full fixed top-0 right-0 z-40 bg-white transition-all' + (drawer ? ' translate-x-0' : ' translate-x-[100%]')}>
+        <ul>
+          <li>
+            <a href="#">TOP</a>
+
+          </li>
+          <li>
+            <a href="#">ご挨拶</a>
+
+          </li>
+          <li>
+            <a href="#">新郎新婦紹介</a>
+
+          </li>
+          <li>
+            <a href="#">挙式まで</a>
+
+          </li>
+          <li>
+            <a href="#">当日のご案内</a>
+
+          </li>
+        </ul>
+      </div>
+      {/* TODO: スクロールバー作成 */}
+      {/* <div className="scroll-bar">
+        <div className="scroll-bar__inner">
+        </div>
+      </div> */}
+      <div className="ab">{countTime2}</div>
       <div className="overflow-x-hidden">
         <div className="w-[100vw] h-[100vh] py-8 relative"> {/* TODO: 案を出す */}
           <div className="w-full h-full absolute top-0 left-0 bg-z opacity-60"></div>
