@@ -181,32 +181,51 @@ function App() {
   //   setCountTime2(0);
   // });
 
+  const [posY, setPosY] = useState<number>(0);
+  const [windowY, setWindowY] = useState<number>(0);
+
+  const scrollTop = (): number => {
+    return Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
+  };
+
+  window.onload = function(){
+    setWindowY(document.body.offsetHeight - window.innerHeight);
+  }
+
+  window.addEventListener("resize", () => {
+    setWindowY(document.body.offsetHeight - window.innerHeight);
+  });
+  
+  window.addEventListener('scroll', function(){
+    setPosY(scrollTop);
+  });
+
 
   const [drawer, setDrawer] = useState<boolean>(false);
   return (
     <>
       {/* TODO: ドロワーメニュー作成 */}
       <div className="w-16 h-16 md:w-[10vw] md:h-[10vw] bg-slate-500 fixed top-0 right-0 z-50" onClick={() => { setDrawer(!drawer) }}>{drawer ? "true" : "false"}</div>
-      <div className={'w-[50vw] h-full fixed top-0 right-0 z-40 bg-white transition-all' + (drawer ? ' translate-x-0' : ' translate-x-[100%]')}>
-        <ul>
-          <li>
-            <a href="#">TOP</a>
+      <div className={'w-full h-full opacity-90 bg-[#2a4073] fixed top-0 right-0 z-40 transition-all' + (drawer ? ' translate-x-0' : ' translate-x-[100%]')}>
+        <ul className="px-4 py-4 text-2xl flex flex-col items-center justify-center h-full drawer-list">
+          <li className="">
+            <a href="#" className="text-white">TOP</a>
 
           </li>
-          <li>
-            <a href="#">ご挨拶</a>
+          <li className="pt-5 mt-5">
+            <a href="#" className="text-white">ご挨拶</a>
 
           </li>
-          <li>
-            <a href="#">新郎新婦紹介</a>
+          <li className="pt-5 mt-5">
+            <a href="#" className="text-white">新郎新婦紹介</a>
 
           </li>
-          <li>
-            <a href="#">挙式まで</a>
+          <li className="pt-5 mt-5">
+            <a href="#" className="text-white">挙式まで</a>
 
           </li>
-          <li>
-            <a href="#">当日のご案内</a>
+          <li className="pt-5 mt-5">
+            <a href="#" className="text-white">当日のご案内</a>
 
           </li>
         </ul>
@@ -216,7 +235,15 @@ function App() {
         <div className="scroll-bar__inner">
         </div>
       </div> */}
-      <div className="ab">{countTime2}</div>
+      <div className={'ab transition-all' + ( ((countTime2 >= 3) && ((windowY - posY) > 200)) ? ' opacity-100' : ' opacity-0')}>
+        <div className="ab__inner"></div>
+        <p>
+          scroll
+        </p>
+        {/* <p>
+        {posY} {windowY}
+        </p> */}
+      </div>
       <div className="overflow-x-hidden">
         <div className="w-[100vw] h-[100vh] py-8 relative"> {/* TODO: 案を出す */}
           <div className="w-full h-full absolute top-0 left-0 bg-z opacity-60"></div>
