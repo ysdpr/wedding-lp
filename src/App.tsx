@@ -97,7 +97,8 @@ function App() {
 
     gsap.to(el6, {
       bottom: '10px',
-      color: '#393f4c',
+      // color: '#393f4c',
+      color: '#FFFFFF',
       scrollTrigger: {
         trigger: el6,
         start: 'center 75%',
@@ -148,14 +149,14 @@ function App() {
       }
     }, [countTime])
   }
-  
+
   const useCountDownInterval2 = (
     countTime2: number,
     setCountTime2: (arg0: number) => void,
   ) => {
     useEffect(() => {
       const countDownInterval = setInterval(() => {
-        window.addEventListener('scroll', function(){
+        window.addEventListener('scroll', function () {
           clearInterval(countDownInterval)
           setCountTime2(0);
         });
@@ -188,44 +189,74 @@ function App() {
     return Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
   };
 
-  window.onload = function(){
+  window.onload = function () {
     setWindowY(document.body.offsetHeight - window.innerHeight);
   }
 
   window.addEventListener("resize", () => {
     setWindowY(document.body.offsetHeight - window.innerHeight);
   });
-  
-  window.addEventListener('scroll', function(){
+
+  window.addEventListener('scroll', function () {
     setPosY(scrollTop);
   });
 
-
   const [drawer, setDrawer] = useState<boolean>(false);
+
+
+  // イベントリスナーの設定
+  useEffect(() => {
+    const handle = (event: any) => {
+      event.preventDefault();
+    };
+    if (drawer) {
+      document.addEventListener('touchmove', handle, { passive: false }); // タッチ操作でのスクロール無効化
+      document.addEventListener('mousewheel', handle, { passive: false }); // マウスホイール操作でのスクロール無効化
+    } else {
+      document.removeEventListener('touchmove', handle); // タッチ操作でのスクロール有効化
+      document.removeEventListener('mousewheel', handle); // マウスホイール操作でのスクロール有効化
+    }
+    return () => {
+      document.removeEventListener('touchmove', handle); // タッチ操作でのスクロール有効化
+      document.removeEventListener('mousewheel', handle); // マウスホイール操作でのスクロール有効化
+    };
+  }, [drawer]);
+
   return (
-    <>
+    <div>
       {/* TODO: ドロワーメニュー作成 */}
-      <div className="w-16 h-16 md:w-[10vw] md:h-[10vw] bg-slate-500 fixed top-0 right-0 z-50" onClick={() => { setDrawer(!drawer) }}>{drawer ? "true" : "false"}</div>
+      <div className={'drawer-menu w-16 h-16 md:w-[10vw] md:h-[10vw]  fixed top-0 right-0 z-50' + (drawer ? " dt" : "")}
+        onClick={() => {
+          setDrawer(!drawer);
+        }}
+      >
+        <div className="drawer-menu__inner">
+          <div className="drawer-menu__line drawer-menu__line--1"> </div>
+          <div className="drawer-menu__line drawer-menu__line--2"> </div>
+          <div className="drawer-menu__line drawer-menu__line--3"> </div>
+        </div>
+
+      </div>
       <div className={'w-full h-full opacity-90 bg-[#2a4073] fixed top-0 right-0 z-40 transition-all' + (drawer ? ' translate-x-0' : ' translate-x-[100%]')}>
         <ul className="px-4 py-4 text-2xl flex flex-col items-center justify-center h-full drawer-list">
           <li className="">
-            <a href="#" className="text-white">TOP</a>
+            <a href="#" className="text-white" onClick={() => {setDrawer(false) }}>TOP</a>
 
           </li>
           <li className="pt-5 mt-5">
-            <a href="#" className="text-white">ご挨拶</a>
+            <a href="#p1" className="text-white" onClick={() => {setDrawer(false) }}>ご挨拶</a>
 
           </li>
           <li className="pt-5 mt-5">
-            <a href="#" className="text-white">新郎新婦紹介</a>
+            <a href="#p2" className="text-white" onClick={() => {setDrawer(false) }}>新郎新婦紹介</a>
 
           </li>
           <li className="pt-5 mt-5">
-            <a href="#" className="text-white">挙式まで</a>
+            <a href="#p3" className="text-white" onClick={() => {setDrawer(false) }}>挙式まで</a>
 
           </li>
           <li className="pt-5 mt-5">
-            <a href="#" className="text-white">当日のご案内</a>
+            <a href="#p4" className="text-white" onClick={() => {setDrawer(false) }}>当日のご案内</a>
 
           </li>
         </ul>
@@ -235,7 +266,7 @@ function App() {
         <div className="scroll-bar__inner">
         </div>
       </div> */}
-      <div className={'ab transition-all' + ( ((countTime2 >= 3) && ((windowY - posY) > 200)) ? ' opacity-100' : ' opacity-0')}>
+      <div className={'ab transition-all' + (((countTime2 >= 3) && ((windowY - posY) > 200)) ? ' opacity-100' : ' opacity-0')}>
         <div className="ab__inner"></div>
         <p>
           scroll
@@ -267,7 +298,7 @@ function App() {
           </div>
         </div>
 
-        <div className="w-[100vw] h-[88vh] flex justify-center items-center snap-start relative">
+        <div className="w-[100vw] h-[88vh] flex justify-center items-center snap-start relative" id='p1'>
           <div className="w-full h-full absolute top-0 left-0 bg-f opacity-30"></div>
 
           <div className="relative z-10 flex flex-col text-l md:text-2xl md:leading-normal [writing-mode:vertical-rl]">
@@ -303,7 +334,7 @@ function App() {
           </div>
         </div>
 
-        <div ref={ref2} className="w-[100vw] bg-[#2a4073] snap-start px-4 md:py-0 bg-t1">
+        <div ref={ref2} className="w-[100vw] bg-[#2a4073] snap-start px-4 md:py-0 bg-t1" id="p2">
           <div className="md:w-[720px] m-auto zzz px-8 md:px-10 py-12 md:py-24 text-[#444]">
             <div className="t-width ml-[-3rem]">
               <div ref={pi} className="flex gap-2 items-end justify-between w-full translate-x-[150%]">
@@ -334,7 +365,7 @@ function App() {
           </div>
         </div>
 
-        <div className="w-[100vw] text-slate-700 bg-cherry">
+        <div className="w-[100vw] text-slate-700 bg-cherry" id="p3">
           <div className="w-full h-full bg-white bg-opacity-65 py-12 px-4">
             <h2 className="text-xl text-center">挙式まで</h2>
             <p className="flex items-end justify-center mt-2">
@@ -350,7 +381,7 @@ function App() {
           </div>
         </div>
 
-        <div ref={ref} className="w-[100vw] bg-[#c1e4e9] py-12 px-6 md:py-24 bg-ex"> {/* TODO: BGのテクスチャを変える */}
+        <div ref={ref} className="w-[100vw] bg-[#c1e4e9] py-12 px-6 md:py-24 bg-ex" id="p4"> {/* TODO: BGのテクスチャを変える */}
           <div className="md:w-[720px] m-auto">
 
             <div className="md:m-auto md:w-[320px]">
@@ -412,14 +443,14 @@ function App() {
         <div className="w-[100vw] h-[100vh] relative overflow-hidden">
           <img src={img3} className="absolute top-0 left-0 w-full h-full object-cover blur-3xl" ref={pi3} alt="" />
           <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-45" ref={pi4}></div>
-          <p ref={pi5} className="text-[#e5abbe] text-xl absolute bottom-[50%] text-center left-0 right-0 mx-auto translate-y-[50%] z-20">
+          <p ref={pi5} className="text-[#e5abbe] text-xl absolute bottom-[50%] text-center left-0 right-0 mx-auto translate-y-[50%] z-20 ssss">
             みなさまにお会いできるのを<br />
             楽しみにしております
           </p>
         </div>
 
       </div>
-    </>
+    </div>
   )
 }
 
