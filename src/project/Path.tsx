@@ -1,4 +1,3 @@
-import './App.css'
 const Path = () => {
   return (
     <div>
