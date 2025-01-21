@@ -1,11 +1,10 @@
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import './App.css'
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import img1 from './assets/241101_067.jpg';
 import img2 from './assets/241101_061.jpg';
 import img3 from './assets/241101_046.jpg';
-import img4 from './assets/241101_110.jpg';
 import Path from './Path';
 
 function App() {
@@ -224,8 +223,7 @@ function App() {
 
   return (
     <div>
-      {/* TODO: ドロワーメニュー作成 */}
-      <div className={'drawer-menu w-16 h-16 md:w-[10vw] md:h-[10vw]  fixed top-0 right-0 z-50' + (drawer ? " dt" : "")}
+      <div className={'drawer-menu w-16 h-16 md:w-[10vw] md:h-[10vw]  fixed top-0 right-0 z-50 cursor-pointer' + (drawer ? " dt" : "")}
         onClick={() => {
           setDrawer(!drawer);
         }}
@@ -261,26 +259,17 @@ function App() {
           </li>
         </ul>
       </div>
-      {/* TODO: スクロールバー作成 */}
-      {/* <div className="scroll-bar">
-        <div className="scroll-bar__inner">
-        </div>
-      </div> */}
       <div className={'ab transition-all' + (((countTime2 >= 3) && ((windowY - posY) > 200)) ? ' opacity-100' : ' opacity-0')}>
         <div className="ab__inner"></div>
         <p>
           scroll
         </p>
-        {/* <p>
-        {posY} {windowY}
-        </p> */}
       </div>
       <div className="overflow-x-hidden">
         <div className="w-[100vw] h-[100vh] py-8 relative"> {/* TODO: 案を出す */}
           <div className="w-full h-full absolute top-0 left-0 bg-z opacity-60"></div>
-          {/* <div className="text-[#302833] text-4xl paint2 shuku bg-[#c85554] w-80 h-80 rounded-full grid place-items-center pb-6 absolute top-0 left-0 translate-x-[-50%] translate-y-[-50%]"></div> */}
           <div className="w-full h-full relative z-10 flex flex-col items-center justify-center">
-            <div className="w-[390px] h-[390px] relative overflow-hidden scale-125">
+            <div className="w-[390px] h-[390px] relative overflow-hidden mv">
               <div className="absolute top-0 left-0 right-0 bottom-0 m-auto w-[128px] h-[128px]">
                 <svg viewBox="0 0 128 128" className="svgbox">
                   <g fontSize="128">
@@ -381,7 +370,7 @@ function App() {
           </div>
         </div>
 
-        <div ref={ref} className="w-[100vw] bg-[#c1e4e9] py-12 px-6 md:py-24 bg-ex" id="p4"> {/* TODO: BGのテクスチャを変える */}
+        <div ref={ref} className="w-[100vw] bg-[#c1e4e9] py-12 px-6 md:py-24 bg-ex" id="p4">
           <div className="md:w-[720px] m-auto">
 
             <div className="md:m-auto md:w-[320px]">
