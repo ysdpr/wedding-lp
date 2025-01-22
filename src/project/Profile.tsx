@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import img1 from '../assets/241101_067.jpg';
-import img2 from '../assets/241101_061.jpg';
+import img2 from '../assets/241101_058.jpg';
 const Profile = () => {
   gsap.registerPlugin(ScrollTrigger);
   const pi = useRef(null);
