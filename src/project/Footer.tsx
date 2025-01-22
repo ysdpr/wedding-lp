@@ -39,13 +39,13 @@ const Footer = () => {
 
 
     gsap.to(el6, {
-      bottom: '10px',
+      bottom: '50px',
       // color: '#393f4c',
       color: '#FFFFFF',
       scrollTrigger: {
         trigger: el6,
-        start: 'center 75%',
-        end: 'center 40%',
+        start: 'center 85%',
+        end: 'center 60%',
         scrub: true,
       },
     });
