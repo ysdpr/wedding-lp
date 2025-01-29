@@ -7,7 +7,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal; */
-
+  backface-visibility:hidden;
 
   /* font-family: "Yuji Syuku", serif;
   font-weight: 400;
@@ -127,7 +127,8 @@ body {
   /*点線の間隔を設定*/
   stroke-dashoffset: 2px;
   /*線の位置を設定*/
-  animation: move 2s ease 1.3s 1 normal forwards;
+  perspective: 1px;
+  animation: move 3s ease 3.16s 1 normal forwards;
 }
 
 @keyframes move {
@@ -194,13 +195,14 @@ body {
     background: #c85554;
     position: absolute;
     offset-rotate: auto 90deg;
-    animation: move2 1.32s linear 1 both;
+    animation: move2 3.2s linear 1 both;
+    perspective: 1px;
 
   }
 
-  @for $i from 1 through 150 {
+  @for $i from 1 through 300 {
     >span:nth-child(#{$i}) {
-      animation-delay: $i * 0.003s;
+      animation-delay: $i * 0.002s;
     }
   }
 
@@ -538,4 +540,8 @@ html {
   object-fit: cover;
   height: 100vh;
   width: 100vw;
+}
+
+.pers {
+  perspective: 1px;
 }

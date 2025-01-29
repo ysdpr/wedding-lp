@@ -1,7 +1,8 @@
 import { useRef, useEffect } from 'react'
 import { gsap } from "gsap";
-import img3 from '../assets/241101_046.jpg';
+// import img3 from '../assets/241101_046.jpg';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import {img46} from '../assets/jsimg/img46';
 
 const Footer = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -57,9 +58,9 @@ const Footer = () => {
 
   return(
     <div className="w-[100vw] h-[100vh] relative overflow-hidden">
-    <img src={img3} className="absolute top-0 left-0 w-full h-full object-cover blur-3xl" ref={pi3} alt="" />
+    <img src={img46} className="absolute top-0 left-0 w-full h-full object-cover blur-3xl" ref={pi3} alt="" />
     <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-45" ref={pi4}></div>
-    <p ref={pi5} className="text-[#e5abbe] text-xl absolute bottom-[50%] text-center left-0 right-0 mx-auto translate-y-[50%] z-20 ssss">
+    <p className="text-[#FFF] text-xl absolute bottom-[50px] text-center left-0 right-0 mx-auto translate-y-[50%] z-20 ssss pers">
       みなさまにお会いできるのを<br />
       楽しみにしております
     </p>

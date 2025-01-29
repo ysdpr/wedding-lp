@@ -7,8 +7,10 @@ import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 import img1 from '../assets/IMG_0978c.jpg';
 import img2 from '../assets/241101_071.jpg';
-import img3 from '../assets/241101_080.jpg';
-import img4 from '../assets/241101_051.jpg';
+// import img3 from '../assets/241101_080.jpg';
+import { img80 } from '../assets/jsimg/img80';
+// import img4 from '../assets/241101_051.jpg';
+import { img51 } from '../assets/jsimg/img51';
 
 
 
@@ -44,13 +46,13 @@ const MainVisual = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className="slide-img">
-              <img src={img3} alt="" />
+              <img src={img80} alt="" />
                 {/* <img src="https://placehold.jp/403d70/ffffff/700x450.png?text=3" alt="3" /> */}
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="slide-img">
-              <img src={img4} alt="" />
+              <img src={img51} alt="" />
                 {/* <img src="https://placehold.jp/70403d/ffffff/700x450.png?text=4" alt="4" /> */}
               </div>
             </SwiperSlide>
@@ -61,11 +63,11 @@ const MainVisual = () => {
 
       {/* <div className="w-full h-full absolute top-0 left-0 bg-z opacity-60"></div> */}
       <div className="w-full h-full relative z-10 flex flex-col items-center justify-center">
-        <div className="w-[390px] h-[390px] relative overflow-hidden mv">
+        <div className="w-[390px] h-[390px] relative mv">
           <div className="absolute top-0 left-0 right-0 bottom-0 m-auto w-[128px] h-[128px]">
             <svg viewBox="0 0 128 128" className="svgbox">
               <g fontSize="128">
-                <text x="64" y="56" textAnchor="middle" dominantBaseline="central">
+                <text x="0" y="112">
                   <tspan>寿</tspan>
                 </text>
               </g>

@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import img1 from '../assets/241101_067.jpg';
 import img2 from '../assets/241101_058.jpg';
+import { img58 } from '../assets/jsimg/img58';
+import { img67 } from '../assets/jsimg/img67';
 const Profile = () => {
   gsap.registerPlugin(ScrollTrigger);
   const pi = useRef(null);
@@ -76,7 +78,7 @@ const textup2 = useRef(null);
           <div className="md:w-[720px] m-auto zzz px-8 md:px-10 py-12 md:py-24 text-[#444]">
             <div className="t-width ml-[-3rem]">
               <div ref={pi} className="flex gap-2 items-end justify-between w-full translate-x-[150%]">
-                <img src={img1} className="w-0 flex-grow imgclip" alt="" />
+                <img src={img67} className="w-0 flex-grow imgclip" alt="" />
                 <p className="shrink-0 text-2xl md:text-3xl">
                   櫻井 友貴
                 </p>
@@ -89,7 +91,7 @@ const textup2 = useRef(null);
             </div>
             <div className="t-width mr-[-3rem] mt-8">
               <div ref={pi2} className="flex flex-row-reverse gap-2 items-end justify-between w-full translate-x-[-150%]">
-                <img src={img2} className="w-0 flex-grow imgclip2" alt="" />
+                <img src={img58} className="w-0 flex-grow imgclip2" alt="" />
                 <p className="shrink-0 text-2xl md:text-3xl">
                   岡本 果波
                 </p>
