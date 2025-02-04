@@ -26,7 +26,7 @@ const Greeting = () => {
             謹白
           </p>
           <p className="mr-4 text-right">
-            令和七年三月吉日
+            令和七年二月吉日
           </p>
           <p className="md:mr-4 leading-tight text-right">
             櫻井 友貴<br />

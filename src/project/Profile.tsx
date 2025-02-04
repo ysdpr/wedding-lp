@@ -85,9 +85,9 @@ const textup2 = useRef(null);
               </div>
             </div>
             <div ref={textup1} className="text-sm mt-6 translate-y-16 opacity-0 md:text-right md:text-base">
-              <p>1991年8月29日、東京都生まれ。エンジニア。</p>
-              <p>プログラミング・DIY・洋菓子作りなど、ものづくりが好き。</p>
-              <p className="mt-3">美味しい料理・お酒をご用意してお待ちしております。</p>
+              <p>1991年8月29日 東京都生まれ エンジニア</p>
+              <p>プログラミング DIY 洋菓子作りなど ものづくりが好き</p>
+              <p className="mt-3">美味しい料理・お酒をご用意してお待ちしております</p>
             </div>
             <div className="t-width mr-[-3rem] mt-8">
               <div ref={pi2} className="flex flex-row-reverse gap-2 items-end justify-between w-full translate-x-[-150%]">
@@ -98,9 +98,9 @@ const textup2 = useRef(null);
               </div>
             </div>
             <div ref={textup2} className="text-sm mt-6 translate-y-16 opacity-0 md:text-base">
-              <p>1998年10月11日、兵庫県生まれ。ホテルスタッフ。</p>
+              <p>1998年10月11日 兵庫県生まれ ホテルスタッフ</p>
               <p>FIXME</p> {/* TODO: 文言入力 */}
-              <p className="mt-3">当日、みなさまにお会いできることを楽しみにしています。</p>
+              <p className="mt-3">当日 みなさまにお会いできることを楽しみにしています</p>
             </div>
           </div>
         </div>

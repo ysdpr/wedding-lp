@@ -43,24 +43,34 @@ const Information = () => {
           </p>
           <dl className="flex flex-col">
             <div className="flex items-end gap-4">
-              <div className="flex items-end gap-4 text-2xl">
-                <dt className="mb-1 w-20">挙式</dt>
-                <dd className="w-16 ovo">11:30</dd>
+              <div className="flex items-end gap-4 text-l">
+                <dt className="mb-1 w-20">集合</dt>
+                <dd className="w-16 ovo pb-0.5">10:50</dd>
               </div>
-              <div className="flex items-end gap-2 text-sm text-slate-600">
+              {/* <div className="flex items-end gap-2 text-sm text-slate-600">
                 <dt className="mb-1">受付</dt>
                 <dd className="mb-0.5 w-16 ovo">10:30</dd>
+              </div> */}
+            </div>
+            <div className="flex items-end gap-4">
+              <div className="flex items-end gap-4 text-2xl">
+                <dt className="mb-1 w-20">挙式</dt>
+                <dd className="w-16 ovo pb-0.5">11:30</dd>
               </div>
+              {/* <div className="flex items-end gap-2 text-sm text-slate-600">
+                <dt className="mb-1">受付</dt>
+                <dd className="mb-0.5 w-16 ovo">10:30</dd>
+              </div> */}
             </div>
             <div className="flex items-end gap-4">
               <div className="flex items-end gap-4 text-2xl">
                 <dt className="mb-1 w-20">披露宴</dt>
-                <dd className="w-16 ovo">12:45</dd>
+                <dd className="w-16 ovo pb-0.5">12:45</dd>
               </div>
-              <div className="flex items-end gap-2 text-sm text-slate-600">
+              {/* <div className="flex items-end gap-2 text-sm text-slate-600">
                 <dt className="mb-1">受付</dt>
                 <dd className="mb-0.5 w-16 ovo">12:15</dd>
-              </div>
+              </div> */}
             </div>
           </dl>
         </div>
@@ -70,7 +80,7 @@ const Information = () => {
 
         <h2 className="text-2xl text-center mt-8">アクセス</h2>
         <p className="mt-2">会場</p>
-        <p className="text-3xl mt-1">神田明神</p>
+        <p className="text-3xl mt-1">神田明神・明神会館</p>
         <div className="">
           <p className="mt-2 text-sm">〒101-0021 東京都千代田区外神田2-16-2</p>
           <p className="text-sm">03-6384-0477</p>

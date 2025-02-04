@@ -202,7 +202,7 @@ body {
 
   @for $i from 1 through 300 {
     >span:nth-child(#{$i}) {
-      animation-delay: $i * 0.002s;
+      animation-delay: $i * 0.0032s;
     }
   }
 
