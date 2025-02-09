@@ -5,7 +5,7 @@ import { Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
-import img1 from '../assets/IMG_0978c.jpg';
+import img1 from '../assets/241101_048.jpg';
 import img2 from '../assets/241101_071.jpg';
 // import img3 from '../assets/241101_080.jpg';
 import { img80 } from '../assets/jsimg/img80';

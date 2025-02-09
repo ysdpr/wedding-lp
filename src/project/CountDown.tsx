@@ -23,7 +23,7 @@ const CountDown = () => {
       }
     
       const now = new Date();
-      const goal = new Date(2025, (3 - 1), 21, 11, 30, 0, 0);
+      const goal = new Date(2025, (4 - 1), 29, 11, 30, 0, 0);
       const betweenTime = ((goal.getTime() - now.getTime()) / 1000);
       const [countTime, setCountTime] = useState<number>(betweenTime);
       useCountDownInterval(countTime, setCountTime);

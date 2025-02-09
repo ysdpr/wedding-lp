@@ -26,7 +26,9 @@ function App() {
         </section>
 
         <section id='p3'>
+          <div className="h-10"></div>
           <CountDown />
+          <div className="h-10"></div>
         </section>
 
         <section id='p4'>
