@@ -547,3 +547,40 @@ html {
 .pers {
   perspective: 1px;
 }
+
+.block {
+  padding: 10%;
+}
+
+#text {
+  mask: url(#mask);
+}
+
+.handwriting {
+  width: 100%;
+  height: auto;
+  &_text {
+    fill: #c85554;
+  }
+  &_mask {
+    &_line {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 4000px;
+      animation: 5s handwriting .4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    }
+  }
+}
+
+
+@keyframes handwriting {
+  0% {
+    stroke-dashoffset: 4000px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
