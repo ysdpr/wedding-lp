@@ -11,6 +11,8 @@ import img2 from '../assets/241101_071.jpg';
 import { img80 } from '../assets/jsimg/img80';
 // import img4 from '../assets/241101_051.jpg';
 import { img51 } from '../assets/jsimg/img51';
+import GOne from '../project/g1';
+import yk6 from '../assets/yk6.svg';
 
 
 
@@ -40,45 +42,44 @@ const MainVisual = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className="slide-img">
-              <img src={img2} alt="" />
+                <img src={img2} alt="" />
                 {/* <img src="https://placehold.jp/40703d/ffffff/700x450.png?text=2" alt="2" /> */}
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="slide-img">
-              <img src={img80} alt="" />
+                <img src={img80} alt="" />
                 {/* <img src="https://placehold.jp/403d70/ffffff/700x450.png?text=3" alt="3" /> */}
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="slide-img">
-              <img src={img51} alt="" />
+                <img src={img51} alt="" />
                 {/* <img src="https://placehold.jp/70403d/ffffff/700x450.png?text=4" alt="4" /> */}
               </div>
             </SwiperSlide>
           </Swiper>
         </div>
 
+        <div className="absolute inset-0 m-auto z-10 grid place-items-center">
+          <div className="w-[60%]">
+          <div className="translate-y-[-0.4em]">
+            <p className="mya mb-5"></p>
+            </div>
+            <p>
+            <img src={yk6} alt="" className="w-24 mb-4 mx-auto" />
+              
+            </p>
+            <GOne />
+            <p className="font-eee">Please join us to celebrate</p>
+            <div className="translate-y-[-2em]">
+
+            <p className="mya mt-5"></p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* <div className="w-full h-full absolute top-0 left-0 bg-z opacity-60"></div> */}
-      <div className="w-full h-full relative z-10 flex flex-col items-center justify-center">
-        <div className="w-[390px] h-[390px] relative mv">
-          <div className="absolute top-0 left-0 right-0 bottom-0 m-auto w-[128px] h-[128px]">
-            <svg viewBox="0 0 128 128" className="svgbox">
-              <g fontSize="128">
-                <text x="0" y="112">
-                  <tspan>寿</tspan>
-                </text>
-              </g>
-            </svg>
-          </div>
-          <Path />
-        </div>
-        {/* <p className="text-white text-5xl paint2 test mt-8">
-            Our Wedding
-          </p> */}
-      </div>
     </div>
 
   )

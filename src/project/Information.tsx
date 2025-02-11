@@ -29,9 +29,9 @@ const Information = () => {
     <div className="md:w-[720px] m-auto">
 
       <div className="md:m-auto md:w-[320px]">
-        <h2 className="text-2xl text-center">ご案内</h2> {/* TODO: 見出しの装飾を作る */}
+        <h2 className="text-2xl text-center topic">ご案内</h2> {/* TODO: 見出しの装飾を作る */}
         <div className="">
-          <p className="text-md mt-2">日程</p>
+          <p className="text-md mt-2 ">日程</p>
           <p className="flex items-end mt-1">
             <span className="text-4xl ovo">2025</span>
             <span className="text-2xl ml-1 pb-1">年</span>
@@ -88,7 +88,7 @@ const Information = () => {
 
       <div className="md:m-auto md:w-[320px]">
 
-        <h2 className="text-2xl text-center mt-8">アクセス</h2>
+        <h2 className="text-2xl text-center mt-8 topic">アクセス</h2>
         <p className="mt-2">会場</p>
         <p className="text-3xl mt-1">嘉ノ雅 茗渓館</p>
         <div className="">

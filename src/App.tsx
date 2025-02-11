@@ -8,7 +8,6 @@ import Profile from './project/Profile';
 import CountDown from './project/CountDown';
 import Information from './project/Information';
 import Footer from './project/Footer';
-import GOne from './project/g1';
 
 function App() {
   return (
@@ -16,12 +15,6 @@ function App() {
       <Drawer />
       <Scroll />
       <div className="overflow-x-hidden">
-        a
-        <div className="block">
-
-        <GOne />
-        </div>
-      a
         <MainVisual />
 
         <section id='p1'>
