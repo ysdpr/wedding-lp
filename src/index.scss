@@ -97,12 +97,30 @@ body {
 }
 
 .bg-ex {
-  // background-image: url('./assets/jp2.jpg');
-  background-image: url('./assets/zzz.jpg');
+  // background-image: url('./assets/zzz.jpg');
+  background-image: url('./assets/zzz1.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-blend-mode: luminosity;
+
+  // position: relative;
+  // &:before {
+  //   z-index: -1;
+  //   content: '';
+  //   width: 100%;
+  //   height: 100%;
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+
+  //   background-image: url('./assets/zzz.jpg');
+  //   opacity: 0.3;
+  //   background-repeat: no-repeat;
+  //   background-position: center center;
+  //   background-size: cover;
+  //   background-blend-mode: luminosity;
+  // }
 }
 
 .bg-t1 {
@@ -539,6 +557,39 @@ html {
     margin-left: 1em;
     transform: rotate(180deg);
   }
+}
+
+.top2 {
+
+  display: flex;
+  justify-content: center;
+  border: none;
+  background-color: inherit;
+  padding: 1.8rem 0 2rem;
+  // border-color: #b27e34;
+
+  position: relative;
+
+  &:before,&:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 320px;
+    height: 24px;
+    background: url('./assets/title.svg') no-repeat center top / contain;
+    filter: drop-shadow(0 0 1px #CAC9C9A0);
+  }
+  &:before {
+
+    top:0;
+  }
+  &:after {
+    transform: scale(1,-1);
+    bottom: 0;
+  }
+
 }
 
 .mya {
