@@ -35,6 +35,7 @@ function App() {
           <Information />
         </section>
 
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfBBg23M8-oJEv8C7oDsSK0FuEAHULrt2VowUmnzNdCKcKnzQ/viewform?embedded=true" className="w-full" height="2446" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
         <Footer />
 
       </div>

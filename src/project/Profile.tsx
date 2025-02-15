@@ -99,7 +99,7 @@ const textup2 = useRef(null);
             </div>
             <div ref={textup2} className="text-sm mt-6 translate-y-16 opacity-0 md:text-base">
               <p>1998年10月11日 兵庫県生まれ ホテルスタッフ</p>
-              <p>FIXME</p> {/* TODO: 文言入力 */}
+              <p>絵を描いたり散歩をすることが大好き</p> {/* TODO: 文言入力 */}
               <p className="mt-3">当日 みなさまにお会いできることを楽しみにしています</p>
             </div>
           </div>
@@ -107,4 +107,4 @@ const textup2 = useRef(null);
     )
 
 }
-export default Profile
+export default Profile;
