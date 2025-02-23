@@ -63,18 +63,17 @@ const MainVisual = () => {
 
         <div className="absolute inset-0 m-auto z-10 grid place-items-center">
           <div className="w-[60%]">
-          <div className="translate-y-[-0.4em]">
-            <p className="mya mb-5"></p>
+            <div className="translate-y-[-0.4em]">
+              <p className="mya mb-5"></p>
             </div>
             <p>
-            <img src={yk6} alt="" className="w-24 mb-4 mx-auto" />
-              
+              <img src={yk6} alt="" className="w-24 mb-4 mx-auto" />
+
             </p>
             <GOne />
             <p className="font-eee">Please join us to celebrate</p>
-            <div className="translate-y-[-2em]">
-
-            <p className="mya mt-5"></p>
+            <div className="translate-y-[-4vw]">
+              <p className="mya mt-5"></p>
             </div>
           </div>
         </div>

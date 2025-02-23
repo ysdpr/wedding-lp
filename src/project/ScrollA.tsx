@@ -45,7 +45,7 @@ const ScrollA = () => {
 
 
   return (
-    <div className={'ab transition-all' + ((windowY - posY) < 200 || ((countTime2 >= 3)  && ((posY) > 200)) ? ' opacity-100' : ' opacity-0')}>
+    <div className={'transition-all' + ((windowY - posY) < 200 || ((countTime2 >= 3)  && ((posY) > 200)) ? ' opacity-100' : ' opacity-0')}>
       {/* <div className="ab__inner"></div> */}
 
       <div className={'fixed bottom-0 left-0 right-0 z-50 pb-2 mx-auto grid place-items-center'}>
