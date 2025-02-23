@@ -40,7 +40,7 @@ const Footer = () => {
 
 
     gsap.to(el6, {
-      bottom: '50px',
+      bottom: '400px',
       // color: '#393f4c',
       color: '#FFFFFF',
       scrollTrigger: {
@@ -60,7 +60,7 @@ const Footer = () => {
     <div className="w-[100vw] h-[100vh] relative overflow-hidden">
     <img src={img46} className="absolute top-0 left-0 w-full h-full object-cover blur-3xl" ref={pi3} alt="" />
     <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-45" ref={pi4}></div>
-    <p className="text-[#FFF] text-xl absolute bottom-[50px] text-center left-0 right-0 mx-auto translate-y-[50%] z-20 ssss pers">
+    <p className="text-[#FFF] text-xl absolute bottom-[6.75rem] text-center left-0 right-0 mx-auto translate-y-[50%] z-20 ssss pers">
       みなさまにお会いできるのを<br />
       楽しみにしております
     </p>

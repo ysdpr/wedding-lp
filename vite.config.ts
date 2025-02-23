@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ command }) => {
   if (command === 'build') {
     return {
-      base: "/wp-content/reactpress/apps/wed/dist/",
+      base: "/wp-content/reactpress/apps/wed_p/dist/",
       plugins: [react()],
       css: {
         preprocessorOptions: {

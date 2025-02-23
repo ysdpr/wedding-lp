@@ -550,9 +550,11 @@ html {
     // background-image: linear-gradient(-90deg, #b27e34, rgba(255, 255, 255, 0));
     background-image: linear-gradient(-90deg, #c9caca, rgba(255, 255, 255, 0));
   }
+
   &:before {
     margin-right: 1em;
   }
+
   &:after {
     margin-left: 1em;
     transform: rotate(180deg);
@@ -570,7 +572,8 @@ html {
 
   position: relative;
 
-  &:before,&:after {
+  &:before,
+  &:after {
     content: '';
     position: absolute;
     left: 0;
@@ -581,12 +584,14 @@ html {
     background: url('./assets/title.svg') no-repeat center top / contain;
     filter: drop-shadow(0 0 1px #CAC9C9A0);
   }
+
   &:before {
 
-    top:0;
+    top: 0;
   }
+
   &:after {
-    transform: scale(1,-1);
+    transform: scale(1, -1);
     bottom: 0;
   }
 
@@ -622,8 +627,9 @@ html {
     // background-image: linear-gradient(-90deg, #b27e34, rgba(255, 255, 255, 0));
     background-image: linear-gradient(-90deg, #FFF, rgba(255, 255, 255, 0));
   }
-  &:before {
-  }
+
+  &:before {}
+
   &:after {
     transform: rotate(180deg);
   }
@@ -635,6 +641,7 @@ html {
     opacity: 0;
     transform: scaleX(0);
   }
+
   10% {
     opacity: 1;
     transform: scaleX(0.1);
@@ -643,5 +650,63 @@ html {
   100% {
     opacity: 1;
     transform: scaleX(1);
+  }
+}
+
+
+
+.bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn25 {
+  background-image: linear-gradient(to right,
+      #29323c,
+      #485563,
+      #2b5876,
+      #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.silv {
+  color: #664A4A;
+  // text-shadow: 0 0 2px #00000066;
+  border: 2px solid #ccafbb;
+  background: linear-gradient(45deg, #ccafbb 0%, #f2e8ec 45%, #fff2f4 60%, #f2e8ec 75%, #ccafbb 90% 100%);
+
+  @media screen and (min-width: 768px) {
+
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+
   }
 }
