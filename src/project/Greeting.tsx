@@ -1,6 +1,6 @@
 const Greeting = () => {
     return (
-        <div className="w-[100vw] h-[88vh] flex justify-center items-center snap-start relative">
+        <div className="w-[100vw] py-40 flex justify-center items-center snap-start relative">
         <div className="w-full h-full absolute top-0 left-0 bg-f opacity-30"></div>
         <div className="relative z-10 flex flex-col text-l md:text-2xl md:leading-normal [writing-mode:vertical-rl]">
           <p className="">
