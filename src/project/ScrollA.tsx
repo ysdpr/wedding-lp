@@ -49,7 +49,9 @@ const ScrollA = () => {
       {/* <div className="ab__inner"></div> */}
 
       <div className={'fixed bottom-0 left-0 right-0 z-50 pb-2 mx-auto grid place-items-center'}>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfBBg23M8-oJEv8C7oDsSK0FuEAHULrt2VowUmnzNdCKcKnzQ/viewform?usp=dialog" target='_blank' className={'grid w-[300px] place-items-center py-4 shadow-lg rounded-full silv'}>出席アンケートに回答する</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfBBg23M8-oJEv8C7oDsSK0FuEAHULrt2VowUmnzNdCKcKnzQ/viewform?usp=dialog" target='_blank' className={'grid w-[300px] place-items-center py-4 shadow-lg text-sm rounded-full silv'}>
+        出席アンケートにご協力ください
+        </a>
       </div>
     </div>
 

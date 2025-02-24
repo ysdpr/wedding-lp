@@ -50,6 +50,9 @@ const Drawer = () => {
           <li className="pt-5 mt-5">
             <a href="#p4" className="text-white" onClick={() => { setDrawer(false) }}>当日のご案内</a>
           </li>
+          <li className="pt-5 mt-5">
+            <a  href="https://docs.google.com/forms/d/e/1FAIpQLSfBBg23M8-oJEv8C7oDsSK0FuEAHULrt2VowUmnzNdCKcKnzQ/viewform?usp=dialog" target='_blank' className="text-white" onClick={() => { setDrawer(false) }}>出席アンケート</a>
+          </li>
         </ul>
       </div>
       </>

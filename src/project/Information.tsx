@@ -65,7 +65,7 @@ const Information = () => {
               </div>
               <div className="flex items-end gap-4">
                 <div className="flex items-end gap-4 text-2xl">
-                  <dt className="mb-1 w-20">fin</dt>
+                  <dt className="mb-1 w-20">終了</dt>
                   <dd className="w-16 ovo pb-0.5">14:30</dd>
                 </div>
                 {/* <div className="flex items-end gap-2 text-sm text-slate-600">
